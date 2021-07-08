@@ -1,0 +1,14 @@
+name: Bayu's workflow
+on: pull_request_review
+
+jobs:
+  labelWhenApproved:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Label Approval
+      uses: pullreminders/label-when-approved-action@master
+      env:
+        APPROVALS: 1
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "Diterima"
