@@ -1,1 +1,2 @@
 name: Bayu's workflow
+on: pull_request_review
